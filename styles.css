@@ -1,13 +1,9 @@
-/* styles.css */
-
-/* Reset básico para o body */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
 }
 
-/* Estilo do hero */
 .hero {
     height: 100vh;
     background: url('/img/background.png') no-repeat center center;
@@ -19,30 +15,41 @@ body {
     margin-bottom: 2rem;
 }
 
+.hero small {
+    position: absolute;
+    top: 28rem;
+    left: 22rem;
+    color: white;
+    margin-bottom: 0;
+}
+
 .hero-content {
     position: absolute;
-    top: 30rem;
-    left: 25rem;
+    top: 36rem;
+    left: 22rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .hero-content .btn {
+    display: flex;
+    align-items: center;
     background-color: #1820ef;
+    font-weight: bold;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 10px;
 }
 
 .hero-content .btn:hover {
     background-color: #808383;
 }
 
-/* Página de Seleção */
 .selection {
     padding: 20px;
     text-align: center;
@@ -69,42 +76,23 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.card img[data-image-active] {
-    display: none;
-}
-
-.card.selected img[data-image-active] {
-    display: block;
-}
-
-.card img:not([data-image-active]) {
-    display: block;
-}
-
-.card.selected {
-    border: 2px solid #1820ef;
-    background-color: #1820ef;
+.card.selected h3,
+.card.selected small,
+.card.selected p.price {
     color: white;
-}
-
-.card.selected h3, .card.selected small, .card.selected p.price {
-    color: white;
+    font-family: 'Rounded Mplus 1c';
 }
 
 .card.selected p.price {
     color: #ffc024;
 }
 
-h2 {
+h2, h3, small, p {
     margin: 10px 0 0;
+    font-family: 'Rounded Mplus 1c';
 }
 
 .price {
@@ -124,16 +112,21 @@ h2 {
     justify-content: center;
 }
 
-.finalizar {
-    background-color: #808383;
+.sucess {
+    display: flex;
+    align-items: center;
+    background-color: #9e9e9e;
+    font-weight: bold;
     color: white;
+    margin-bottom: 5rem;
     padding: 15px 30px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 10px;
 }
 
-.finalizar:hover {
+.sucess:hover {
     background-color: #1820ef;
 }
