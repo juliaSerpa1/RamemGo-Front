@@ -16,10 +16,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "22"
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build # ou qualquer comando que você use para construir seu projeto
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GHCR_TOKEN }}
-          publish_dir: ./
+          github_token: ${{ secrets.GHCR_TOKEN }} # Utilize GITHUB_TOKEN fornecido pelo GitHub
+          publish_dir: ./build # ou o diretório onde os arquivos finais são gerados
