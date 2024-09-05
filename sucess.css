@@ -8,6 +8,7 @@ body {
     height: 100vh;
     background-color: #f4f4f4;
 }
+
 h4 {
     margin: 10px 0 0;
     font-family: 'Rounded Mplus 1c';
@@ -16,7 +17,7 @@ h4 {
 
 h5 {
     font-family: 'Rounded Mplus 1c';
-    font-size:larger;
+    font-size: larger;
     margin: 0;
 }
 
@@ -79,7 +80,6 @@ small {
     color: white;
     background-color: #1820ef;
     text-decoration: none;
-    border-radius: 5px;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     gap: 10px;
@@ -89,10 +89,20 @@ small {
     background-color: #808383;
 }
 
-#order-details{
-    margin: 0px;
+#order-details {
+    margin: 0;
     color: #ffc024;
     font-family: 'Rounded Mplus 1c';
     font-weight: bold;
     font-size: x-large;
+}
+
+#order-image {
+    max-width: 100%;
+    height: auto;
+}
+
+#order-image {
+    width: 354px;
+    height: 392px;
 }

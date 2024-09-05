@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Erro ao buscar detalhes:', error));
     }
 
-    document.querySelector('.btn.finalizar').addEventListener('click', (event) => {
+    document.querySelector('.btn.sucess').addEventListener('click', (event) => {
         event.preventDefault();
 
         console.log('Selected Broth ID:', selectedBrothId);
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     return response.json();
                 })
                 .then(data => {
-                    window.location.href = `finalizar.html?id=${data.id}&description=${encodeURIComponent(data.description)}&image=${encodeURIComponent(data.image)}`;
+                    window.location.href = `sucess.html?id=${data.id}&description=${encodeURIComponent(data.description)}&image=${encodeURIComponent(data.image)}`;
                 })
                 .catch(error => console.error('Erro ao criar a ordem:', error));
         } else {
