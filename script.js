@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.log('Order being sent:', order);
 
-            fetch('https://quiet-savannah-88387-11f94bf2e7f4.herokuapp.com', {
+            fetch('https://quiet-savannah-88387-11f94bf2e7f4.herokuapp.com/orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
