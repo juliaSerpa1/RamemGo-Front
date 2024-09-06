@@ -40,14 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function fetchDetails(endpoint, id) {
-        const apiBaseUrl = 'https://quiet-savannah-88387-11f94bf2e7f4.herokuapp.com/';
+        const apiBaseUrl = 'https://quiet-savannah-88387-11f94bf2e7f4.herokuapp.com';
         const url = `${apiBaseUrl}${endpoint}/${id}`;
 
         fetch(url, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': 'ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf'
+                'Content-Type': 'application/json'
             }
         })
             .then(response => {
@@ -82,11 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.log('Order being sent:', order);
 
-            fetch('https://quiet-savannah-88387-11f94bf2e7f4.herokuapp.com/', {
+            fetch('https://quiet-savannah-88387-11f94bf2e7f4.herokuapp.com', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'x-api-key': 'ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(order)
             })
