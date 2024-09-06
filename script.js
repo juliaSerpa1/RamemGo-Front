@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function fetchDetails(endpoint, id) {
-        const apiBaseUrl = 'http://localhost:3000';
+        const apiBaseUrl = 'https://quiet-savannah-88387-11f94bf2e7f4.herokuapp.com/';
         const url = `${apiBaseUrl}${endpoint}/${id}`;
 
         fetch(url, {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.log('Order being sent:', order);
 
-            fetch('http://localhost:3000/orders', {
+            fetch('https://quiet-savannah-88387-11f94bf2e7f4.herokuapp.com/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
