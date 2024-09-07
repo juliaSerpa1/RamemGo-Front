@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 const card = document.querySelector(`.card-container[data-type="${endpoint.slice(1)}"] .card[data-id="${id}"]`);
                 if (card) {
-                    card.querySelector('img').src = data.imageActive; // Define a imagem ativa da resposta
+                    card.querySelector('img').src = data.imageActive;
                     card.querySelector('h3').textContent = data.name;
                     card.querySelector('small').textContent = data.description;
                     card.querySelector('.price').textContent = `US$ ${data.price}`;
