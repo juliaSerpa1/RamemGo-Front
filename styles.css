@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: 'Rounded Mplus 1c';
+    color: #333;
+}
+
+.hero {
+    height: 100vh;
+    background: url('images/background.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero small {
+    position: absolute;
+    top: 34rem;
+    left: 22rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+.hero-content {
+    position: absolute;
+    top: 42rem;
+    left: 22rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content .btn {
+    display: flex;
+    align-items: center;
+    background-color: #1820ef;
+    font-weight: bold;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+}
+
+.hero-content .btn:hover {
+    background-color: #808383;
+}
+
+/* Seção de seleção */
+.selection {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container de cartões */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+}
+
+/* Estilos dos cartões */
+.card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    margin: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card.selected h3,
+.card.selected small,
+.card.selected p.price {
+    color: white;
+    font-family: 'Rounded Mplus 1c';
+}
+
+.card.selected p.price {
+    color: #ffc024;
+}
+
+h2, h3, small, p {
+    margin: 10px 0 0;
+    font-family: 'Rounded Mplus 1c';
+}
+
+.price {
+    color: #ff4e42;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card.selected {
+    border: 2px solid #1820ef;
+    background-color: #1820ef;
+    color: white;
+}
+
+.btn-submit {
+    display: flex;
+    justify-content: center;
+}
+
+.sucess {
+    display: flex;
+    align-items: center;
+    background-color: #9e9e9e;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5rem;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+}
+
+.sucess:hover {
+    background-color: #1820ef;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 767px) {
+    .hero {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .hero small {
+        position: static;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        position: static;
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .hero-content .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .sucess {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

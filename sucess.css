@@ -1,0 +1,140 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+h4 {
+    margin: 10px 0 0;
+    font-family: 'Rounded Mplus 1c';
+    color: #ff4e42;
+}
+
+h5 {
+    font-family: 'Rounded Mplus 1c';
+    font-size: larger;
+    margin: 0;
+}
+
+small {
+    margin: 10px 0 0;
+    font-family: 'Rounded Mplus 1c';
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Ajustes para dispositivos maiores */
+.left-side, .right-side {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-side {
+    background-color: #1820ef;
+    color: white;
+}
+
+.left-side img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.right-side {
+    background-color: white;
+}
+
+.icon {
+    width: 40px;
+    height: 43.57px;
+}
+
+.icon2 {
+    width: 150px;
+    height: 26px;
+}
+
+.right-side .button {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 15px;
+    color: white;
+    background-color: #1820ef;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+}
+
+.button:hover {
+    background-color: #808383;
+}
+
+#order-details {
+    margin: 0;
+    color: #ffc024;
+    font-family: 'Rounded Mplus 1c';
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#order-image {
+    max-width: 100%;
+    height: auto;
+}
+
+#order-image {
+    width: 354px;
+    height: 392px;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-side, .right-side {
+        flex: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .left-side img {
+        max-width: 80%;
+    }
+
+    .right-side .button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    #order-image {
+        width: 100%;
+        height: auto;
+    }
+
+    #order-details {
+        font-size: large;
+    }
+}
