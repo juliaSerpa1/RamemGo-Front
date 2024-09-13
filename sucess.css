@@ -1,3 +1,4 @@
+/* Estilos básicos */
 body {
     margin: 0;
     padding: 0;
@@ -30,18 +31,23 @@ small {
     display: flex;
     width: 100%;
     height: 100vh;
+    flex-direction: column;
 }
 
-.left-side {
+/* Ajustes para dispositivos maiores */
+.left-side, .right-side {
     flex: 1;
-    background-color: #1820ef;
-    color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.left-side {
+    background-color: #1820ef;
+    color: white;
 }
 
 .left-side img {
@@ -51,12 +57,6 @@ small {
 }
 
 .right-side {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: white;
 }
 
@@ -105,4 +105,36 @@ small {
 #order-image {
     width: 354px;
     height: 392px;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-side, .right-side {
+        flex: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .left-side img {
+        max-width: 80%;
+    }
+
+    .right-side .button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    #order-image {
+        width: 100%;
+        height: auto;
+    }
+
+    #order-details {
+        font-size: large;
+    }
 }

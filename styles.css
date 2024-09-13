@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Rounded Mplus 1c';
     color: #333;
 }
 
@@ -17,7 +17,7 @@ body {
 
 .hero small {
     position: absolute;
-    top: 28rem;
+    top: 34rem;
     left: 22rem;
     color: white;
     margin-bottom: 0;
@@ -25,7 +25,7 @@ body {
 
 .hero-content {
     position: absolute;
-    top: 36rem;
+    top: 42rem;
     left: 22rem;
     display: flex;
     align-items: center;
@@ -50,11 +50,13 @@ body {
     background-color: #808383;
 }
 
+/* Seção de seleção */
 .selection {
     padding: 20px;
     text-align: center;
 }
 
+/* Container de cartões */
 .card-container {
     display: flex;
     justify-content: center;
@@ -64,6 +66,7 @@ body {
     margin-top: 3rem;
 }
 
+/* Estilos dos cartões */
 .card {
     background: #f9f9f9;
     border: 1px solid #ddd;
@@ -129,4 +132,45 @@ h2, h3, small, p {
 
 .sucess:hover {
     background-color: #1820ef;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 767px) {
+    .hero {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .hero small {
+        position: static;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        position: static;
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .hero-content .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .sucess {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
